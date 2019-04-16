@@ -1,3 +1,5 @@
+# #install package
+# install.packages("raster")
 library(raster)
 
 pre <- raster("foo")
