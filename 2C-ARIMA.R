@@ -71,10 +71,6 @@ format(tmp, "%j")
 
 NDVIp.trasp <- t(NDVIpmasksz[,2:length(listB04)])
 
-
-
-
-
 NDVIp.TS <- ts(data=NDVIp.trasp, start=c(2016, 9), end=c(2019, 3), frequency=36, class=c("mts", "ts"))
 dev.off()
 par(mfrow=c(1,1))
