@@ -1,4 +1,8 @@
-dataPrep <- function(folder, aoi, output = "./temporal_nc"){
+# para iniciar la función: 1º cargo la función (source("0-data...))
+# después ejecuto la función con los argumentos correspondientes:
+# data <- dataPrep(folder= "/media/DATOS/z/",aoi="Relevamiento Pipitone Raul_mod.shp")
+
+dataPrep <- function(folder, aoi, output = "./temporal_nc/"){
   #load packages
   require(sf)
   require(raster)
@@ -13,7 +17,7 @@ dataPrep <- function(folder, aoi, output = "./temporal_nc"){
   #check directory
   getwd()
   #set working directory
-  working_directory <- setwd("/media/DATOS/z/")
+  working_directory <- setwd(folder)
   working_directory
   
   #importar las parcelas
@@ -159,6 +163,7 @@ dataPrep <- function(folder, aoi, output = "./temporal_nc"){
   result <- list()
   result[[1]] <- stackB04pmask
   result[[2]] <- stackB08pmask
-  names(result) <- c("R", "NIR")
+  result[[3]] <- nombre_parcela
+  names(result) <- c("R", "NIR", "nombre_parcela")
   return(result)
 }
