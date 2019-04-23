@@ -103,3 +103,4 @@ lines(parcela2)
 
 plot((NDVIpmasksz[[70]] - bfmspat[[2]]) / NDVIpmasksz[[70]])
 plot((bfmspat[[2]]) / NDVIpmasksz[[70]], zlim = c(-5,5))
+
